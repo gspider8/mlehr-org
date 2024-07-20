@@ -23,18 +23,16 @@ Object.freeze(myPortfolio);
 const renderCards = (arr = myPortfolio) => {
   console.log("setPlayerCards");
   projectCards.innerHTML += arr
-    .map(
-      ({ name,description, languages }) =>
+    .map(({ name,description, languages }) =>
         `
         <div class="project-card">
           <h2>${name}</h2>
           <p>${description}</p>
           <p>Languages: ${languages}</p>
-          <p><a href="#">View</a></p>
+          <p><a href="{% url 'music_player' %}">View</a></p>
         </div>
       `
-    )
-    .join("");
+    ).join("");
 };
 
 renderCards();

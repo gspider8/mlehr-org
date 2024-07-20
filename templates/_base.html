@@ -1,21 +1,17 @@
 {% load static %}
 <!DOCTYPE html>
+
 <html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <title>{% block title %}{% endblock title %}</title>
-    <link type ="text/css" rel="stylesheet" href="{% static 'css/base.css' %}" />
-</head>
-
-<body>
-    <main>
-        <div class="container">
-            {% block content %}
-            {% endblock content %}
-        </div>
-    </main>
-    
-    <script src="{% static 'js/base.js' %}"></script>
-</body>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Portfolio Home</title>
+        <link type ="text/css" rel="stylesheet" href="{% static 'home/styles.css' %}" />
+    </head>
+    <body>
+        {% block content %}
+            {# main content here #}
+        {% endblock content %}
+    </body>
 </html>

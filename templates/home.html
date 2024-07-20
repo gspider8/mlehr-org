@@ -1,21 +1,16 @@
+{% extends "_base.html" %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio Home</title>
-    <link type ="text/css" rel="stylesheet" href="{% static 'css/home.css' %}" />
-</head>
 
-<body>
+{% block title %}Home{% endblock title %}
+
+{% block content %}
     <h1 class="title">Recent Projects</h1>
-    <main>
-      <div class="cards" id="project-cards"></div>
-    </main>
     
-    <script src="{% static 'js/home.js' %}"></script>
-</body>
-</html>
+    <main>
+        <div class="cards" id="project-cards"></div>
+    </main>
+        
+    <script src="{% static 'home/index.js' %}"></script>
+
+{% endblock content %}
