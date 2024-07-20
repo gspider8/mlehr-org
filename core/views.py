@@ -6,4 +6,4 @@ class HomePageView(TemplateView):
 
 
 class MusicPlayer(TemplateView):
-    template_name = "fcc_javascript/index.html"
+    template_name = "fcc_javascript/music_player/index.html"

@@ -2,6 +2,7 @@ const projectCards = document.getElementById("project-cards");
 const myPortfolio = [
   {
     name: "Music Player",
+    id: "music_player",
     description: "FreeCodeCamp JavaScript Course",
     languages: "HTML, CSS, JavaScript",
     link: "musicPlayer",
@@ -9,6 +10,7 @@ const myPortfolio = [
   },
   {
     name: "Football Cards",
+    id: "football_cards",
     description: "FreeCodeCamp JavaScript Course",
     languages: "HTML, CSS, JavaScript",
     link: "footballCards",
@@ -17,22 +19,13 @@ const myPortfolio = [
 ]
 
 
-Object.freeze(myPortfolio);
+myPortfolio.forEach((obj) => {
+  projectCards.innerHTML += `
+    <div class="project-card">
+      <h2>${obj.name}</h2>
+      <p>${obj.description}</p>
+      <p>Languages: ${obj.languages}</p>
+      <p><a href="${obj.id}/">View</a></p>
+    </div>`
+})
 
-
-const renderCards = (arr = myPortfolio) => {
-  console.log("setPlayerCards");
-  projectCards.innerHTML += arr
-    .map(({ name,description, languages }) =>
-        `
-        <div class="project-card">
-          <h2>${name}</h2>
-          <p>${description}</p>
-          <p>Languages: ${languages}</p>
-          <p><a href="{% url 'music_player' %}">View</a></p>
-        </div>
-      `
-    ).join("");
-};
-
-renderCards();
