@@ -1,0 +1,17 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    {% block head %}
+      {# head content here #}
+    {% endblock head %}
+    <link type ="text/css" rel="stylesheet" href="{% static 'fcc_javascript/styles.css' %}" />
+  </head>
+  <body>
+    {% block body %}
+      {# main content here #}
+    {% endblock body %}
+    <script src="{% static 'fcc_javascript/index.js' %}"></script>
+  </body>
+</html>

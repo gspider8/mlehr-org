@@ -1,16 +1,12 @@
 {% extends "_base.html" %}
 {% load static %}
 
-
 {% block title %}Home{% endblock title %}
 
 {% block content %}
   <h1 class="title">Recent Projects</h1>
-  
   <main>
     <div class="cards" id="project-cards"></div>
   </main>
-      
   <script src="{% static 'home/index.js' %}"></script>
-  
 {% endblock content %}

@@ -7,3 +7,7 @@ class HomePageView(TemplateView):
 
 class MusicPlayer(TemplateView):
     template_name = "fcc_javascript/music_player/index.html"
+
+
+class FootballCards(TemplateView):
+    template_name = "fcc_javascript/football_cards/index.html"
