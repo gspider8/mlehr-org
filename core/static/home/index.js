@@ -1,11 +1,38 @@
 const projectCards = document.getElementById("project-cards");
 const myPortfolio = [
   {
+    name: "Dragon Fighting RPG",
+    id: "dragon_rpg",
+    description: "FreeCodeCamp JavaScript Course",
+    language: "HTML, CSS, JavaScript",
+    number: 3
+  },
+  {
+    name: "Random Background Color",
+    id: "random_background_color",
+    description: "FreeCodeCamp JavaScript Course",
+    language: "HTML, CSS, JavaScript",
+    number: 4
+  },
+  {
+    name: "Calorie Counter",
+    id: "calorie_counter",
+    description: "FreeCodeCamp JavaScript Course",
+    language: "HTML, CSS, JavaScript",
+    number: 5
+  },
+  {
+    name: "Rock Paper Scissors",
+    id: "rock_paper_scissors",
+    description: "FreeCodeCamp JavaScript Course",
+    language: "HTML, CSS, JavaScript",
+    number: 6
+  },
+  {
     name: "Music Player",
     id: "music_player",
     description: "FreeCodeCamp JavaScript Course",
     languages: "HTML, CSS, JavaScript",
-    link: "musicPlayer",
     number: 7
   },
   {
@@ -13,8 +40,14 @@ const myPortfolio = [
     id: "football_cards",
     description: "FreeCodeCamp JavaScript Course",
     languages: "HTML, CSS, JavaScript",
-    link: "footballCards",
     number: 10
+  },
+  {
+    name: "Statistics Calculator",
+    id: "statistics_calculator",
+    description: "FreeCodeCamp JavaScript Course",
+    languages: "HTML, CSS, JavaScript",
+    number: 16
   }
 ]
 

@@ -11,3 +11,8 @@ class MusicPlayer(TemplateView):
 
 class FootballCards(TemplateView):
     template_name = "fcc_javascript/football_cards/index.html"
+
+
+class StatisticsCalculator(TemplateView):
+    template_name = "fcc_javascript/statistics_calculator/index.html"
+
