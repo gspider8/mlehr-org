@@ -4,9 +4,45 @@
 {% block title %}Home{% endblock title %}
 
 {% block content %}
-  <h1 class="title">Recent Projects</h1>
+  
   <main>
-    <div class="cards" id="project-cards"></div>
+    <div id="recent-projects">
+      <h1 class="title">Recent Projects</h1>
+      <div class="filters">
+        <div class="filter" style="width:200px;">
+          <select id="type-filter">
+            <option value="0" selected>Project Type: </option>
+            <option value="all">All</option>
+            <option value="front-end">Front-End Projects</option>
+            <option value="back-end">Back-End Projects</option>
+            <option value="iac">Infrastructure as Code Projects</option>
+          </select>
+        </div>  
+        <div class="filter" style="width:200px;">
+          <select id="language-filter">
+            <option value="0">Languages:</option>
+            <option value="all">All</option>
+            <option value="python">Python</option>
+            <option value="html">HTML</option>
+            <option value="css">CSS</option>
+            <option value="hcl">Terraform HCL</option>
+          </select>
+        </div>
+        <div class="filter" style="width:200px;">
+          <select id="framework-filter">
+            <option value="0">Frameworks:</option>
+            <option value="all">All</option>
+            <option value="django">Django</option>
+          </select>
+        </div>
+      </div>
+      
+      
+      <div class="cards" id="project-cards">
+        {# JavaScript Generated #}
+      </div>
+    </div>
+    
   </main>
   <script src="{% static 'home/index.js' %}"></script>
 {% endblock content %}
