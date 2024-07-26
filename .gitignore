@@ -2,3 +2,5 @@
 __pycache__/
 staticfiles/
 *.sqlite3
+docker-compose-prod.yml
+.env

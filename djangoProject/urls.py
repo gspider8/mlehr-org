@@ -5,7 +5,7 @@ from django.urls import path, include
 
 urlpatterns = [
     # Django admin
-    path("admin/", admin.site.urls),
+    path("holygrail/", admin.site.urls),
 
     # User Management
     path("accounts/", include("django.contrib.auth.urls")),

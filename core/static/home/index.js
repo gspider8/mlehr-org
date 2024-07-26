@@ -127,36 +127,7 @@ const filterProjects = () => {
       && filterByLanguage(project)
       && filterByFramework(project)
   ))
-
-
-
 }
-
-// typeFilter.addEventListener("change", (e) => {
-//   //
-//   if (e.target.value === "all") {
-//     renderProjectCards(myPortfolio);
-//   } else {
-//     renderProjectCards(myPortfolio.filter(
-//       project => project.type === e.target.value
-//     ));
-//   }
-// })
-
-// languageFilter.addEventListener("change", (e) => {
-//   // projectCards.innerHTML = "";
-//   if (e.target.value === "all") {
-//     renderProjectCards(myPortfolio);
-//   } else {
-//     // renderProjectCards(myPortfolio.filter(project => project.languages.includes(e.target.value)));
-//     renderProjectCards(myPortfolio.filter(
-//       project => {
-//         const languagesArray = project.languages.toLowerCase().split(", ")
-//         return languagesArray.includes(e.target.value);
-//       }
-//     ));
-//   }
-// })
 
 renderProjectCards(myPortfolio);
 
