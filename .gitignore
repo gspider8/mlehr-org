@@ -7,3 +7,5 @@ docker-compose-prod.yml
 
 .terraform/
 terraform.tfvars
+terraform.tfstate
+terraform.tfstate.*
