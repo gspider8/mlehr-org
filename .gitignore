@@ -4,3 +4,6 @@ staticfiles/
 *.sqlite3
 docker-compose-prod.yml
 .env
+
+.terraform/
+terraform.tfvars
