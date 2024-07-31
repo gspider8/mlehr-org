@@ -31,7 +31,7 @@ SECRET_KEY = env("DJANGO_SECRET_KEY", default="django-insecure-66463pmh4m3e89okg
 # DEBUG = env("DEBUG", default=False)
 DEBUG = True
 
-ALLOWED_HOSTS = ["127.0.0.1", "localhost", "mlehr.org", "34.207.77.144/"]
+ALLOWED_HOSTS = ["127.0.0.1", "localhost", "mlehr.org", "3.89.159.246"]
 
 CSRF_TRUSTED_ORIGINS = []
 

@@ -1,10 +1,12 @@
 #!/bin/bash
 
 # Variables
-PROJECT_MAIN_DIR_NAME="djangoProject"
-GIT_REPO_URL="https://github.com/gspider8/mlehr-org.git"
+#PROJECT_MAIN_DIR_NAME="djangoProject"
+#GIT_REPO_URL="https://github.com/gspider8/mlehr-org.git"
 #GIT_REPO_URL="https://<your_username>:<your_PAT>@github.com/codewithmuh/django-aws-ec2-autoscaling.git"
-NGINX_SITE_SETTINGS_DIR="mlehr_django"
+PROJECT_MAIN_DIR_NAME="${project_main_dir_name}"
+GIT_REPO_URL="${git_repo_url}"
+NGINX_SITE_NAME="${nginx_site_name}"
 
 # --- Git ---
 git clone "$GIT_REPO_URL" "/home/ubuntu/$PROJECT_MAIN_DIR_NAME"
@@ -43,9 +45,9 @@ sudo systemctl daemon-reload
 # Remove default Nginx site if exists
 sudo rm -f /etc/nginx/sites-enabled/default
 # Copy Nginx configuration file
-sudo cp "/home/ubuntu/$PROJECT_MAIN_DIR_NAME/nginx/nginx.conf" "/etc/nginx/sites-available/$NGINX_SITE_SETTINGS_DIR"
+sudo cp "/home/ubuntu/$PROJECT_MAIN_DIR_NAME/nginx/nginx.conf" "/etc/nginx/sites-available/$NGINX_SITE_NAME"
 # Create symbolic link to enable Nginx site
-sudo ln -s "/etc/nginx/sites-available/$NGINX_SITE_SETTINGS_DIR" "/etc/nginx/sites-enabled/"
+sudo ln -s "/etc/nginx/sites-available/$NGINX_SITE_NAME" "/etc/nginx/sites-enabled/"
 # Add www-data user to ubuntu group
 sudo gpasswd -a www-data ubuntu
 # Restart Nginx service
@@ -55,6 +57,10 @@ sudo systemctl restart nginx
 # Activate virtual environment
 echo "Activating virtual environment..."
 source "/home/ubuntu/$PROJECT_MAIN_DIR_NAME/.venv/bin/activate"
-# Run collectstatic command
+# Manage static files
 echo "Running collectstatic command..."
 python manage.py collectstatic --noinput
+# Restart Gunicorn and Nginx services
+echo "Restarting Gunicorn and Nginx services..."
+sudo service gunicorn restart
+sudo service nginx restart
