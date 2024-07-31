@@ -21,6 +21,9 @@ sudo apt-get install -y python3-pip
 sudo apt-get install -y python3-venv
 sudo apt-get install -y nginx
 
+sudo apt install docker.io
+sudo apt install docker-compose
+
 # --- Python Dependencies ---
 echo "Activating virtual environment..."
 python3 -m venv .venv
