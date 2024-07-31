@@ -30,10 +30,10 @@ resource "aws_instance" "node" {
     Name    = var.project_name
     project = var.project_name
   }
-  user_data = templatefile(var.user_data_path,
-    {
-      git_repo_url = "https://github.com/gspider8/mlehr-org.git"
-      project_main_dir = "djangoProject"
-    }
-  )
+#   user_data = templatefile(var.user_data_path,
+#     {
+#       git_repo_url = "https://github.com/gspider8/mlehr-org.git"
+#       project_main_dir = "djangoProject"
+#     }
+#   )
 }
