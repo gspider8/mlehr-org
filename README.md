@@ -19,3 +19,5 @@ https://github.com/codewithmuh/django-aws-ec2-nginx-gunicorn/tree/main scripts
 terraform apply then try to go through scripts to get it working
 make sure bad security settings are in effect
 
+need to figure out how to get a test server going
+learn how nginx actually works 
